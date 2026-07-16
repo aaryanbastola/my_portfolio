@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaryan Bastola - Personal Portfolio</title>
+    <title>Aaryan Bastola - Personal Portfolio
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
+        <div class="header-container";>
+        </div>
         <img src="images/logo.png" alt="Portfolio Logo for Aaryan Bastola">
         <h1>Aaryan Bastola</h1>
         <nav>
@@ -18,10 +23,21 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="search-container">
+            <form action="#" method="GET">
+                <input type="text" placeholder="Search..." name="search" aria-label="Search">
+                <button type="submit">Go</button>
+            </form>
+        </div>
     </header>
+    <div class="header-spacer">
+    </div> <!-- Spacer to prevent content from being hidden behind the fixed header -->  
 
     <main>
         <section id="about">
+            <div class="intro">
+                <h1>Welcome to My Portfolio</h1>
+            </div>
             <h2>About Me</h2>
             <img src="images/profile.jpg" alt="Professional headshot of Aaryan Bastola in a suit">
             <p>Welcome to my portfolio! I am a dedicated professional with a passion for building clean, accessible, and structured web applications. I believe in relying on solid fundamentals and writing semantic markup that works seamlessly across all devices and assistive technologies.</p>
@@ -29,57 +45,80 @@
 
         <section id="skills">
             <h2>Technical Skills</h2>
-            <dl>
-                <dt>Semantic HTML5, CSS, JS, Node.js, C, C++, Python</dt>
-                <dd>Structuring documents for maximum accessibility and readability without relying on visual hacks.</dd>
-                
-                <dt>Version Control</dt>
-                <dd>Managing codebases efficiently using Git and GitHub.</dd>
-                
-                <dt>System Architecture</dt>
-                <dd>Designing scalable back-end solutions and database structures.</dd>
-                <dt>CyberSecurity</dt>
-                <dd>Implementing robust security measures to protect applications and data from threats.</dd>
-            </dl>
+            <div class="skills-intro">
+                <p>My technical expertise spans both frontend and backend development, as well as cybersecurity fundamentals. I am proficient in a variety of programming languages and frameworks, and I am committed to continuous learning and improvement.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-card">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item"><i class="fa-brands fa-html5" style="color: #0ea5e9;"></i> HTML</span>
+                        <span class="skill-item"><i class="fa-brands fa-css3-alt" style="color: #0ea5e9;"></i> CSS</span>
+                        <span class="skill-item"><i class="fa-brands fa-js" style="color: #0ea5e9;"></i> JavaScript</span>
+                        <span class="skill-item" style="width: 100%; margin-top: 0.5rem;"><i class="fa-brands fa-react" style="color: #0ea5e9;"></i> React.js</span>
+                    </div>
+                </div>
+
+                <div class="skills-card">
+                    <h3>Backend & Core</h3>
+                    <div class="skill-items">
+                        <span class="skill-item"><i class="fa-brands fa-python" style="color: #0ea5e9;"></i> Python</span>
+                        <span class="skill-item"><i class="fa-solid fa-code" style="color: #0ea5e9;"></i> C</span>
+                        <span class="skill-item"><i class="fa-solid fa-terminal" style="color: #0ea5e9;"></i> C++</span>
+                    </div>
+                </div>
+
+                <div class="skills-card">
+                    <h3>Cybersecurity</h3>
+                    <p>Penetration Testing, Network Security & Ethical Hacking fundamentals.</p>
+                    <i class="fa-solid fa-shield-halved" style="margin-top: 1rem; color: #ffffff; font-size: 1.2rem;"></i>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
-            <article>
-                <h3>Vanilla JS Data Dashboard</h3>
-                <p>A lightweight, dependency-free dashboard that processes and displays large datasets entirely in the browser using raw JavaScript.</p>
-                <p><a href="https://github.com/aaryanbastola" target="_blank">View Repository on GitHub</a></p>
-            </article>
+            <div class="projects-intro">
+                <h2>Projects</h2>
+                <p>Here are some of the projects I've worked on. Each project showcases my ability to create functional, user-friendly applications that adhere to best practices in web development.</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Vanilla JS Data Dashboard</h3>
+                    <p>A lightweight, dependency-free dashboard that processes and displays large datasets entirely in the browser using raw JavaScript.</p>
+                    <a href="https://github.com/aaryanbastola" target="_blank"><i class="fa-brands fa-github"></i> View Repository</a>
+                </article>
 
-            <article>
-                <h3>Accessible Form Validator</h3>
-                <p>An open-source library dedicated to ensuring all web forms meet WCAG 2.1 AAA compliance standards straight out of the box.</p>
-                <p><a href="https://github.com/aaryanbastola" target="_blank">View Repository on GitHub</a></p>
-            </article>
+                <article class="project-card">
+                    <h3>Accessible Form Validator</h3>
+                    <p>An open-source library dedicated to ensuring all web forms meet WCAG 2.1 AAA compliance standards straight out of the box.</p>
+                    <a href="https://github.com/aaryanbastola" target="_blank"><i class="fa-brands fa-github"></i> View Repository</a>
+                </article>
+            </div>
         </section>
+        
         <hr>
+        
         <section id="contact">
             <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <div>
-                    <label for="userName">Name:</label>
-                    <input type="text" id="userName" name="userName" required>
-                </div>
-                <br>
-                <div>
-                    <label for="userEmail">Email:</label>
-                    <input type="email" id="userEmail" name="userEmail" required>
-                </div>
-                <br>
-                <div>
-                    <label for="userMessage">Message:</label><br>
-                    <textarea id="userMessage" name="userMessage" rows="5" cols="30" required></textarea>
-                </div>
-                <br>
+            <div class="contact-intro">
+                <p>If you have any questions, collaboration ideas, or just want to say hello, feel free to reach out using the form below. I look forward to connecting with you!</p>
+            </div>
+            <!-- Updated with the contact-container class you provided -->
+            <form action="#" method="POST" class="contact-container">
+                <label for="userName">Name:</label>
+                <input type="text" id="userName" name="userName" required>
+                
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" name="userEmail" required>
+                
+                <label for="userMessage">Message:</label>
+                <textarea id="userMessage" name="userMessage" rows="5" cols="30" required></textarea>
+                
                 <button type="submit">Send Message</button>
             </form>
         </section>
 
+        <!-- Keep Social Links formatting if needed -->
         <img src="images/linkedin.png" alt="linkedIn logo" width="30" height="30">
         <h1>linkedin</h1>
         <img src="images/gmail.jpg" alt="gmail logo" width="20" height="20">
@@ -91,8 +130,8 @@
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Aaryan Bastola. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2026 Aaryan Bastola. All rights reserved. <a href="#">Privacy Policy</a></p>
     </footer>
 
 </body>
