@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaryan Bastola - Personal Portfolio
-    </title>
+    <title>Aaryan Bastola - Personal Portfolio</title>
+    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="header-container";>
-        </div>
         <img src="images/logo.png" alt="Portfolio Logo for Aaryan Bastola">
         <h1>Aaryan Bastola</h1>
         <nav>
@@ -30,14 +28,9 @@
             </form>
         </div>
     </header>
-    <div class="header-spacer">
-    </div> <!-- Spacer to prevent content from being hidden behind the fixed header -->  
 
     <main>
         <section id="about">
-            <div class="intro">
-                <h1>Welcome to My Portfolio</h1>
-            </div>
             <h2>About Me</h2>
             <img src="images/profile.jpg" alt="Professional headshot of Aaryan Bastola in a suit">
             <p>Welcome to my portfolio! I am a dedicated professional with a passion for building clean, accessible, and structured web applications. I believe in relying on solid fundamentals and writing semantic markup that works seamlessly across all devices and assistive technologies.</p>
@@ -45,9 +38,6 @@
 
         <section id="skills">
             <h2>Technical Skills</h2>
-            <div class="skills-intro">
-                <p>My technical expertise spans both frontend and backend development, as well as cybersecurity fundamentals. I am proficient in a variety of programming languages and frameworks, and I am committed to continuous learning and improvement.</p>
-            </div>
             <div class="skills-grid">
                 <div class="skills-card">
                     <h3>Frontend</h3>
@@ -73,14 +63,35 @@
                     <p>Penetration Testing, Network Security & Ethical Hacking fundamentals.</p>
                     <i class="fa-solid fa-shield-halved" style="margin-top: 1rem; color: #ffffff; font-size: 1.2rem;"></i>
                 </div>
+
+                <!-- UPDATED: Certifications Badges Slider Card -->
+                <div class="skills-card">
+                    <h3>Certifications & Badges</h3>
+                    <div class="slider" id="slider">
+                        <div class="slider-container">
+                            <div class="slider-track">
+                                <!-- AWS Badges -->
+                                <div class="slide"><img src="/images/aws-academy-graduate-cloud-foundations-training-bad.png" alt="AWS Cloud Foundations"></div>
+                                <div class="slide"><img src="/images/aws-academy-graduate-cloud-security-foundations-tra.png" alt="AWS Cloud Security Foundations"></div>
+                                <div class="slide"><img src="/images/aws-academy-graduate-generative-ai-foundations-trai.png" alt="AWS Generative AI Foundations"></div>
+                                <!-- Cisco Badges -->
+                                <div class="slide"><img src="/images/ethical-hacker.png" alt="Cisco Ethical Hacker"></div>
+                                <div class="slide"><img src="/images/introduction-to-cybersecurity.png" alt="Cisco Introduction to Cybersecurity"></div>
+                                <div class="slide"><img src="/images/introduction-to-iot.png" alt="Cisco Introduction to IoT"></div>
+                                <div class="slide"><img src="/images/introduction-to-modern-ai.png" alt="Cisco Introduction to Modern AI"></div>
+                                <div class="slide"><img src="/images/networking-basics.png" alt="Cisco Networking Basics"></div>
+                            </div>
+                            <button class="slider-btn prev">&#10094;</button>
+                            <button class="slider-btn next">&#10095;</button>
+                        </div>
+                        <div class="slider-dots"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects">
-            <div class="projects-intro">
-                <h2>Projects</h2>
-                <p>Here are some of the projects I've worked on. Each project showcases my ability to create functional, user-friendly applications that adhere to best practices in web development.</p>
-            </div>
+            <h2>Projects</h2>
             <div class="projects-grid">
                 <article class="project-card">
                     <h3>Vanilla JS Data Dashboard</h3>
@@ -100,10 +111,6 @@
         
         <section id="contact">
             <h2>Contact Me</h2>
-            <div class="contact-intro">
-                <p>If you have any questions, collaboration ideas, or just want to say hello, feel free to reach out using the form below. I look forward to connecting with you!</p>
-            </div>
-            <!-- Updated with the contact-container class you provided -->
             <form action="#" method="POST" class="contact-container">
                 <label for="userName">Name:</label>
                 <input type="text" id="userName" name="userName" required>
@@ -118,7 +125,6 @@
             </form>
         </section>
 
-        <!-- Keep Social Links formatting if needed -->
         <img src="images/linkedin.png" alt="linkedIn logo" width="30" height="30">
         <h1>linkedin</h1>
         <img src="images/gmail.jpg" alt="gmail logo" width="20" height="20">
@@ -134,5 +140,7 @@
         <p>&copy; 2026 Aaryan Bastola. All rights reserved. <a href="#">Privacy Policy</a></p>
     </footer>
 
+    <!-- JS linked at the bottom -->
+    <script src="slider.js"></script>
 </body>
 </html>
